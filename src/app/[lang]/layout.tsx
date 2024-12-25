@@ -30,21 +30,18 @@ const inter = Inter({ subsets: ["latin"] });
 export async function generateMetadata({ params }: { params: { lang: Locale } }): Promise<Metadata> {
   // 获取当前语言的翻译字典
   const dict = await getDictionary(params.lang)
-  const url = process.env.NEXT_PUBLIC_APP_URL || 'https://your-domain.com'
+  const url = 'https://workspace-saver.vercel.app'
   
   return {
-    // 设置页面标题，支持默认标题和模板
+    metadataBase: new URL(url),
     title: {
       default: dict.metadata.title,
-      template: `%s | ${dict.metadata.title}`  // %s 会被具体页面的标题替换
+      template: `%s | ${dict.metadata.title}`
     },
     // 页面描述和关键词
     description: dict.metadata.description,
     keywords: dict.metadata.keywords,
     authors: [{ name: 'yeheboo' }],
-    // 设置网站基础URL
-    metadataBase: new URL(url),
-    // 设置多语言版本链接
     alternates: {
       canonical: `${url}/${params.lang}`,  // 当前页面的标准链接
       languages: {

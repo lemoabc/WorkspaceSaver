@@ -14,6 +14,7 @@ export default async function Footer({
     [dict.footer.product]: [
       { name: dict.footer.links.chinesecolor, href: 'https://chinesecolor.xyz' },
       { name: dict.footer.links.lemobook, href: 'https://lemobook.vercel.app' },
+      { name: dict.footer.links.workspacesaver, href: 'https://workspace-saver.vercel.app' }
     ],
     [dict.footer.social]: [
       { name: dict.footer.links.twitter, href: 'https://x.com/lemo_ing' },
