@@ -48,7 +48,7 @@ export default function FAQ({ lang, dict }: FAQProps) {
                 {dict.faq.tabs.technical}
               </TabsTrigger>
             </TabsList>
-            {Object.entries(dict.faq.questions).map(([category, questions]) => (
+            {Object.entries(dict.faq.questions).map(([category, questions]: [string, any[]]) => (
               <TabsContent key={category} value={category}>
                 <Accordion type="single" collapsible className="w-full">
                   {questions.map((item: any, index: number) => (
