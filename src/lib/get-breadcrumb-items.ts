@@ -22,12 +22,6 @@ export function getBreadcrumbItems(pathname: string, dict: any) {
           })
         }
         break
-      case 'pricing':
-        items.push({
-          label: dict.nav.pricing,
-          href: `/${lang}/pricing`
-        })
-        break
       case 'profile':
         items.push({
           label: dict.nav.profile,
