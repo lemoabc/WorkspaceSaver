@@ -1,0 +1,179 @@
+{
+  "nav": {
+    "features": "Features",
+    "blog": "Blog",
+    "pricing": "Pricing",
+    "docs": "Docs",
+    "signin": "Sign in",
+    "signout": "Sign out",
+    "profile": "Profile",
+    "download": "Download"
+  },
+  "home": {
+    "hero": {
+      "title": "WorkspaceSaver - Smart Workspace Management Tool",
+      "description": "Automatically save and restore your workspace state, making work more efficient and continuous",
+      "download": "Download Now",
+      "viewDemo": "View Demo"
+    },
+    "cta": {
+      "title": "Start Using WorkspaceSaver",
+      "description": "Download for free and boost your productivity",
+      "button": "Download for Windows"
+    }
+  },
+  "footer": {
+    "product": "AI Design Products",
+    "resources": "Resources",
+    "social": "Social",
+    "support": "Support",
+    "company": "About",
+    "copyright": "© 2024 WorkspaceSaver. All rights reserved.",
+    "links": {
+      "features": "Features",
+      "pricing": "Pricing",
+      "changelog": "Changelog",
+      "roadmap": "Roadmap",
+      "docs": "Documentation",
+      "dev": "Developers",
+      "api": "API",
+      "faq": "FAQ",
+      "help": "User Guide",
+      "contact": "Contact Us",
+      "feedback": "Issue Feedback",
+      "about": "About Us",
+      "terms": "Terms of Service",
+      "privacy": "Privacy Policy",
+      "chinesecolor": "Chinese Colors",
+      "lemobook": "Lemo Book",
+      "twitter": "Twitter",
+      "github": "Github",
+      "jike": "Jike"
+    }
+  },
+  "metadata": {
+    "title": "WorkspaceSaver - Smart Workspace Management Tool",
+    "description": "A powerful Windows tool that helps you automatically save and restore workspace states to improve productivity",
+    "keywords": "workspace management, window management, productivity tool, Windows software"
+  },
+  "common": {
+    "brand": "WorkspaceSaver",
+    "loading": "Loading..."
+  },
+  "features": {
+    "title": "Powerful Workspace Management",
+    "description": "Make your work more efficient and continuous, never worry about unexpected shutdowns or window chaos",
+    "autoSave": {
+      "title": "Smart Auto Save",
+      "description": "Automatically save all window states at regular intervals, including position, size, and layout, never lose work progress"
+    },
+    "restore": {
+      "title": "Smart Selective Restore",
+      "description": "Supports auto-start on boot and selective window restoration, allowing you to restore specific applications or workspaces as needed"
+    },
+    "settings": {
+      "title": "Personalized Configuration",
+      "description": "Customize save intervals, auto-start behavior, hotkeys, and set window blacklist, full control over software behavior"
+    },
+    "security": {
+      "title": "Secure & Reliable",
+      "description": "All data is stored locally, never uploaded to the cloud, supports manual backup and restore, ensuring your workspace security"
+    }
+  },
+  "faq": {
+    "title": "User Guide & FAQ",
+    "description": "Quickly understand how to use the software and solve common issues",
+    "tabs": {
+      "general": "Basic Usage",
+      "features": "Features",
+      "technical": "Technical"
+    },
+    "questions": {
+      "general": [
+        {
+          "question": "How do I start using this software?",
+          "answer": "After installation, the software runs automatically in the system tray. You can right-click the tray icon to configure settings. By default, it saves workspace state every 5 minutes and supports auto-start on boot."
+        },
+        {
+          "question": "Is this software free?",
+          "answer": "Yes, WorkspaceSaver is completely free for all users with no feature restrictions."
+        },
+        {
+          "question": "Will it affect my computer's performance?",
+          "answer": "No. The software is optimized to use minimal resources only during saves, with negligible system impact during normal operation."
+        }
+      ],
+      "features": [
+        {
+          "question": "What types of windows are supported?",
+          "answer": "We support all common application windows, such as documents, browsers, development tools, etc. You can also set which window types you don't want to save."
+        },
+        {
+          "question": "How do I restore my previous workspace?",
+          "answer": "The software offers two restoration methods: 1. On system startup, it will automatically prompt you to choose windows to restore; 2. You can also right-click the system tray icon and select 'Restore Workspace' at any time."
+        },
+        {
+          "question": "Can I selectively restore specific windows?",
+          "answer": "Yes. In the restore interface, you can freely choose which windows to restore, either by application category or individual windows."
+        },
+        {
+          "question": "Can I customize the save interval?",
+          "answer": "Yes. In settings, you can adjust the auto-save interval, configure auto-start behavior, hotkeys, and other features."
+        }
+      ],
+      "technical": [
+        {
+          "question": "Which systems are supported?",
+          "answer": "Currently we support Windows 10 and above, including all Windows 11 versions."
+        },
+        {
+          "question": "Where is the data stored?",
+          "answer": "All data is stored in a dedicated folder in your user directory, completely offline. You can backup or delete this data anytime."
+        },
+        {
+          "question": "How do I get help if I have issues?",
+          "answer": "You can view the detailed user guide through the 'Help' option in the software, or report issues via Github Issues for prompt support."
+        }
+      ]
+    }
+  },
+  "testimonials": {
+    "title": "Real User Reviews",
+    "description": "Authentic experiences from users across industries"
+  },
+  "blog": {
+    "title": "Blog Posts",
+    "description": "Learn more about workspace management and productivity tips",
+    "loadMore": "Load More",
+    "backToList": "Back to List",
+    "posts": [
+      {
+        "id": 1,
+        "slug": "workspace-management-tips",
+        "title": "Effective Workspace Management Tips",
+        "description": "Explore how to optimize your multi-window workflow with WorkspaceSaver to boost productivity.",
+        "date": "2024-02-20",
+        "readTime": "5 min read",
+        "content": "In today's digital work environment, we often need to handle multiple applications and windows simultaneously. How to effectively manage these windows and maintain a clean, efficient workspace has become an important topic.\n\n## Common Workspace Management Issues\n\n1. Window chaos leading to low productivity\n2. Work progress loss due to unexpected shutdowns\n3. Need to rearrange windows after restart\n4. Complex window management in multi-monitor environments\n\n## WorkspaceSaver Solutions\n\n### 1. Auto Save Feature\n- Regular saving of all window states\n- Includes position, size, and layout information\n- Prevents progress loss in unexpected situations\n\n### 2. Smart Recovery System\n- Automatic startup\n- Selective restoration support\n- Maintains workspace continuity\n\n### 3. Personalized Configuration\n- Custom save intervals\n- Flexible startup options\n- Window blacklist functionality\n\n## Usage Tips\n\n1. Set appropriate save intervals based on work nature\n2. Use selective restore to manage different projects\n3. Create personalized window layout templates\n4. Regularly organize and optimize workspace layouts\n\n## Summary\n\nThrough proper use of WorkspaceSaver, you can significantly improve work efficiency and reduce time spent on window management. Let's focus more on creation rather than repetitive window organization tasks."
+      },
+      {
+        "id": 2,
+        "slug": "multi-monitor-workspace",
+        "title": "Multi-Monitor Workspace Optimization Guide",
+        "description": "Learn how to use WorkspaceSaver to manage window layouts in multi-monitor environments for the perfect work experience.",
+        "date": "2024-02-15",
+        "readTime": "4 min read",
+        "content": "Multi-monitor setups have become standard for many professionals looking to boost productivity. This article introduces how to optimize multi-monitor work environments using WorkspaceSaver.\n\n## Multi-Monitor Challenges\n\n1. Window position memory issues\n2. Adaptation after display configuration changes\n3. Managing multiple workspace switches\n\n## WorkspaceSaver's Multi-Monitor Support\n\n### 1. Smart Position Memory\n- Accurately records each window's monitor position\n- Automatically adapts to display configuration changes\n- Maintains relative window positioning\n\n### 2. Flexible Recovery Options\n- Restore by monitor grouping\n- Support for partial window recovery\n- Quick switching between different workspace layouts\n\n## Practical Tips\n\n1. Create dedicated layouts for different work tasks\n2. Use hotkeys for improved efficiency\n3. Establish monitor task allocation\n\n## Best Practices\n\n1. Place most-used applications on primary monitor\n2. Rationally allocate different monitor purposes\n3. Regularly save common layout schemes\n\n## Conclusion\n\nWorkspaceSaver makes multi-monitor environment management simple and efficient, helping you fully utilize the advantages of multi-monitor setups."
+      },
+      {
+        "id": 3,
+        "slug": "workspace-automation",
+        "title": "Workspace Automation: The Secret to Enhanced Productivity",
+        "description": "Explore how WorkspaceSaver's automation features can make your work easier and more efficient.",
+        "date": "2024-02-10",
+        "readTime": "3 min read",
+        "content": "In modern work environments, automation has become a key factor in improving efficiency. Let's see how WorkspaceSaver can help automate workspace management.\n\n## Value of Automation\n\n1. Reduces repetitive work\n2. Improves work efficiency\n3. Minimizes human error\n\n## WorkspaceSaver's Automation Features\n\n### 1. Automatic Save System\n- Timed workspace state saves\n- Smart save timing\n- Prevents data loss\n\n### 2. Startup Automation\n- Automatic launch on boot\n- Smart recovery prompts\n- Quick work state restoration\n\n### 3. Personalized Automation\n- Custom save rules\n- Condition-based triggers\n- Scenario-based configuration\n\n## Usage Recommendations\n\n1. Set reasonable auto-save intervals\n2. Configure startup automation\n3. Utilize hotkeys for efficiency\n\n## Summary\n\nThrough WorkspaceSaver's automation features, you can build a smarter, more efficient work environment. Let technology serve you while you focus on what truly matters."
+      }
+    ]
+  }
+}
