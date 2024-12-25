@@ -15,19 +15,32 @@ interface PreviewStep {
 
 interface PreviewDialogProps {
   lang: Locale
-  dict: any
+  labels: {
+    viewDemo: string
+    previous: string
+    next: string
+    steps: {
+      autoSave: {
+        title: string
+        description: string
+        selectWindows: string
+        settings: string
+        autoSaveInterval: string
+        autoStartBoot: string
+        hotkeySettings: string
+      }
+    }
+  }
 }
 
-export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
+export function PreviewDialog({ lang, labels }: PreviewDialogProps) {
   const [currentStep, setCurrentStep] = useState(0)
 
   // 预览步骤
   const steps: PreviewStep[] = [
     {
-      title: lang === 'zh-CN' ? "智能自动保存" : "Smart Auto Save",
-      description: lang === 'zh-CN' 
-        ? "自动保存所有窗口状态，包括位置、大小和布局" 
-        : "Automatically save all window states, including position, size, and layout",
+      title: labels.steps.autoSave.title,
+      description: labels.steps.autoSave.description,
       icon: <Save className="h-5 w-5 text-primary" />,
       animation: (lang: Locale) => (
         <div className="relative w-full h-64 bg-background/50 rounded-lg p-4 border-2 border-primary/20">
@@ -69,10 +82,8 @@ export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
       )
     },
     {
-      title: lang === 'zh-CN' ? "智能选择恢复" : "Smart Selective Restore",
-      description: lang === 'zh-CN'
-        ? "支持开机自启动并选择性恢复窗口，灵活便捷"
-        : "Support auto-start on boot and selective window restoration",
+      title: labels.steps.autoSave.title,
+      description: labels.steps.autoSave.description,
       icon: <Monitor className="h-5 w-5 text-primary" />,
       animation: (lang: Locale) => (
         <div className="relative w-full h-64 bg-background/50 rounded-lg p-4 border-2 border-primary/20">
@@ -83,7 +94,7 @@ export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
           <div className="absolute right-4 top-4 w-48 bg-background border-2 border-primary/30 rounded-md shadow-lg overflow-hidden">
             <div className="h-8 bg-primary/10 border-b border-primary/20 flex items-center px-3">
               <span className="text-sm font-medium text-primary">
-                {lang === 'zh-CN' ? "选择要恢复的窗口" : "Select windows to restore"}
+                {labels.steps.autoSave.selectWindows}
               </span>
             </div>
             <div className="p-3 space-y-3">
@@ -112,10 +123,8 @@ export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
       )
     },
     {
-      title: lang === 'zh-CN' ? "个性化配置" : "Personalized Configuration",
-      description: lang === 'zh-CN'
-        ? "自定义保存间隔、开机自启动、快捷键等，完全掌控软件行为"
-        : "Customize save intervals, auto-start, hotkeys, etc.",
+      title: labels.steps.autoSave.title,
+      description: labels.steps.autoSave.description,
       icon: <Settings2 className="h-5 w-5 text-primary" />,
       animation: (lang: Locale) => (
         <div className="relative w-full h-64 bg-background/50 rounded-lg p-4 border-2 border-primary/20">
@@ -127,19 +136,19 @@ export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
             <div className="h-8 bg-primary/10 border-b border-primary/20 flex items-center px-3">
               <Settings2 className="w-4 h-4 text-primary mr-2" />
               <span className="text-sm font-medium text-primary">
-                {lang === 'zh-CN' ? "设置" : "Settings"}
+                {labels.steps.autoSave.settings}
               </span>
             </div>
             <div className="p-4 space-y-4">
               <div className="space-y-2">
                 <div className="text-xs text-primary/70">
-                  {lang === 'zh-CN' ? "自动保存间隔" : "Auto Save Interval"}
+                  {labels.steps.autoSave.autoSaveInterval}
                 </div>
                 <div className="animate-width h-2 bg-primary/30 rounded-full" />
               </div>
               <div className="space-y-2">
                 <div className="text-xs text-primary/70">
-                  {lang === 'zh-CN' ? "开机自启动" : "Auto Start on Boot"}
+                  {labels.steps.autoSave.autoStartBoot}
                 </div>
                 <div className="flex items-center">
                   <div className="w-8 h-4 bg-primary/20 rounded-full p-1">
@@ -149,7 +158,7 @@ export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
               </div>
               <div className="space-y-2">
                 <div className="text-xs text-primary/70">
-                  {lang === 'zh-CN' ? "快捷键设置" : "Hotkey Settings"}
+                  {labels.steps.autoSave.hotkeySettings}
                 </div>
                 <div className="animate-width-delay-2 flex space-x-1">
                   <div className="h-6 w-8 bg-primary/10 rounded flex items-center justify-center text-xs text-primary/70">
@@ -172,7 +181,7 @@ export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
       <DialogTrigger asChild>
         <Button size="lg" variant="outline" className="gap-2">
           <PlayCircle className="h-5 w-5" />
-          {dict.home.hero.viewDemo}
+          {labels.viewDemo}
         </Button>
       </DialogTrigger>
       <DialogContent className="sm:max-w-[700px] p-0 gap-0 bg-background/95 backdrop-blur-xl border-primary/20 rounded-xl overflow-hidden">
@@ -203,7 +212,7 @@ export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
               className="gap-2"
             >
               <ArrowLeft className="h-4 w-4" />
-              {lang === 'zh-CN' ? "上一步" : "Previous"}
+              {labels.previous}
             </Button>
             <span className="text-sm text-muted-foreground">
               {currentStep + 1} / {steps.length}
@@ -212,7 +221,7 @@ export function PreviewDialog({ lang, dict }: PreviewDialogProps) {
               onClick={() => setCurrentStep((prev) => (prev < steps.length - 1 ? prev + 1 : 0))}
               className="gap-2"
             >
-              {lang === 'zh-CN' ? "下一步" : "Next"}
+              {labels.next}
               <ArrowRight className="h-4 w-4" />
             </Button>
           </div>

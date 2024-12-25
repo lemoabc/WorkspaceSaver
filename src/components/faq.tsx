@@ -1,21 +1,16 @@
+"use client"
+
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs"
-import { 
-  Accordion, 
-  AccordionContent, 
-  AccordionItem, 
-  AccordionTrigger 
-} from "@/components/ui/accordion"
-import { getDictionary } from "@/i18n/get-dictionary"
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion"
 import type { Locale } from "@/i18n/config"
 import { HelpCircle, Wrench, Settings } from "lucide-react"
 
-export default async function FAQ({
-  lang
-}: {
+interface FAQProps {
   lang: Locale
-}) {
-  const dict = await getDictionary(lang)
+  dict: any
+}
 
+export default function FAQ({ lang, dict }: FAQProps) {
   return (
     <section className="w-full py-12 md:py-24 lg:py-32">
       <div className="container px-4 md:px-6">
@@ -56,7 +51,7 @@ export default async function FAQ({
             {Object.entries(dict.faq.questions).map(([category, questions]) => (
               <TabsContent key={category} value={category}>
                 <Accordion type="single" collapsible className="w-full">
-                  {questions.map((item, index) => (
+                  {questions.map((item: any, index: number) => (
                     <AccordionItem key={index} value={`item-${index}`} className="glass">
                       <AccordionTrigger className="text-left">
                         {item.question}

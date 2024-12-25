@@ -1,5 +1,6 @@
+"use client"
+
 import { Star } from "lucide-react"
-import { getDictionary } from "@/i18n/get-dictionary"
 import type { Locale } from "@/i18n/config"
 
 interface TestimonialCardProps {
@@ -35,13 +36,12 @@ function TestimonialCard({ avatar, name, title, content }: TestimonialCardProps)
   )
 }
 
-export default async function Testimonials({
-  lang
-}: {
+interface TestimonialsProps {
   lang: Locale
-}) {
-  const dict = await getDictionary(lang)
+  dict: any
+}
 
+export default function Testimonials({ lang, dict }: TestimonialsProps) {
   const testimonialsByLang = {
     'zh-CN': [
       {

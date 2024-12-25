@@ -1,20 +1,15 @@
+"use client"
+
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card"
-import { getDictionary } from "@/i18n/get-dictionary"
 import type { Locale } from "@/i18n/config"
-import { 
-  Save,
-  History,
-  Settings,
-  Shield
-} from "lucide-react"
+import { Save, History, Settings, Shield } from "lucide-react"
 
-export default async function Features({
-  lang
-}: {
+interface FeaturesProps {
   lang: Locale
-}) {
-  const dict = await getDictionary(lang)
+  dict: any
+}
 
+export default function Features({ lang, dict }: FeaturesProps) {
   const features = [
     {
       icon: <Save className="h-6 w-6" />,
@@ -39,7 +34,7 @@ export default async function Features({
   ]
 
   return (
-    <section className="w-full py-12 md:py-24 lg:py-32">
+    <section className="w-full py-12 md:py-24 lg:py-32 bg-muted/50">
       <div className="container px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter md:text-4xl">
