@@ -42,6 +42,16 @@ export async function generateMetadata({ params }: { params: { lang: Locale } })
     description: dict.metadata.description,
     keywords: dict.metadata.keywords,
     authors: [{ name: 'yeheboo' }],
+    icons: {
+      icon: '/images/logo.svg',
+      shortcut: '/images/logo.svg',
+      apple: '/images/logo.svg',
+      other: {
+        rel: 'mask-icon',
+        url: '/images/logo.svg',
+        color: '#000000'
+      }
+    },
     alternates: {
       canonical: `${url}/${params.lang}`,  // 当前页面的标准链接
       languages: {
