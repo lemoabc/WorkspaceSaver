@@ -1,0 +1,17 @@
+<svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- 背景圆形 -->
+  <circle cx="16" cy="16" r="16" fill="hsl(255, 65%, 65%)" fill-opacity="0.1"/>
+  
+  <!-- 主窗口外框 -->
+  <rect x="6" y="6" width="20" height="20" rx="3" stroke="hsl(255, 65%, 65%)" stroke-width="2"/>
+  
+  <!-- 窗口标题栏 -->
+  <rect x="6" y="6" width="20" height="4" rx="2" fill="hsl(255, 65%, 65%)"/>
+  
+  <!-- 自动保存图标 -->
+  <path d="M12 16L15 19L20 14" stroke="hsl(255, 65%, 65%)" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+  
+  <!-- 装饰性圆点 -->
+  <circle cx="9" cy="8" r="1" fill="white"/>
+  <circle cx="13" cy="8" r="1" fill="white"/>
+</svg> 

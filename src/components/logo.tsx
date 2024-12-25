@@ -24,8 +24,7 @@ export function Logo({ lang, className }: LogoProps) {
     <Link href={`/${lang}`} className={`flex items-center space-x-2 ${className}`}>
       {!imgError ? (
         <Image
-          src="https://via.placeholder.com/32"
-        //   src="/images/logo.png"
+          src="/images/logo.svg"
           alt="WorkspaceSaver Logo"
           width={32}
           height={32}
